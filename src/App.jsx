@@ -34,8 +34,13 @@ const App = () => {
   return (
     <>
       <h1>¿Es necesario el context?</h1>
+
       <AddPost createPost={createPost} />
-      <LayoutPosts posts={posts} deletePost={deletePost} />
+
+      <LayoutPosts
+        posts={posts}
+        deletePost={deletePost}
+      />
     </>
   );
 };
