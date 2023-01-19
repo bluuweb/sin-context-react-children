@@ -1,6 +1,9 @@
+import { usePostStore } from "../store/usePostStore";
 import Button from "./Button";
 
-export default function AddPost({ createPost }) {
+export default function AddPost() {
+  const addPostStore = usePostStore((state) => state.addPost);
+
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -8,11 +11,7 @@ export default function AddPost({ createPost }) {
     const title = data.get("title");
     const content = data.get("content");
 
-    createPost({
-      id: Date.now(),
-      title,
-      content,
-    });
+    addPostStore({ title, content, id: Date.now() });
   };
 
   return (
