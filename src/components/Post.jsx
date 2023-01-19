@@ -6,9 +6,11 @@ export default function Post({ post, deletePost }) {
       {post.title}- {post.content}
       <footer>
         <Button
-          deletePost={deletePost}
-          postId={post.id}
-        />
+          onClick={() => deletePost(post.id)}
+          className="secondary"
+        >
+          Eliminar
+        </Button>
       </footer>
     </article>
   );

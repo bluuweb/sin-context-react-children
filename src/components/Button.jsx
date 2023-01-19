@@ -1,10 +1,3 @@
-export default function Button({ deletePost, postId }) {
-  return (
-    <button
-      onClick={() => deletePost(postId)}
-      className="contrast"
-    >
-      Eliminar
-    </button>
-  );
+export default function Button({ children, ...props }) {
+  return <button {...props}>{children}</button>;
 }

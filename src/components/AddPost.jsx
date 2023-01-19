@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function AddPost({ createPost }) {
   const onSubmit = (e) => {
     e.preventDefault();
@@ -27,7 +29,12 @@ export default function AddPost({ createPost }) {
         name="content"
         defaultValue="Contenido del post 4"
       />
-      <button type="submit">Agregar</button>
+      <Button
+        type="submit"
+        className="secondary"
+      >
+        Crear Post
+      </Button>
     </form>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LayoutPosts from "./components/LayoutPosts";
 import AddPost from "./components/AddPost";
+import Post from "./components/Post";
 
 const initialPosts = [
   {
@@ -27,10 +28,17 @@ const App = () => {
 
       <AddPost createPost={createPost} />
 
-      <LayoutPosts
-        posts={posts}
-        deletePost={deletePost}
-      />
+      <LayoutPosts>
+        {posts.map((post) => (
+          <Post
+            key={post.id}
+            post={post}
+            deletePost={deletePost}
+          />
+        ))}
+
+        {posts.length === 0 && <article>No hay Posts</article>}
+      </LayoutPosts>
     </div>
   );
 };
