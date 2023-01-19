@@ -2,6 +2,7 @@ import { useState } from "react";
 import LayoutPosts from "./components/LayoutPosts";
 import AddPost from "./components/AddPost";
 import Post from "./components/Post";
+import Button from "./components/Button";
 
 const initialPosts = [
   {
@@ -34,7 +35,14 @@ const App = () => {
             key={post.id}
             post={post}
             deletePost={deletePost}
-          />
+          >
+            <Button
+              onClick={() => deletePost(post.id)}
+              className="secondary"
+            >
+              Eliminar
+            </Button>
+          </Post>
         ))}
 
         {posts.length === 0 && <article>No hay Posts</article>}

@@ -1,17 +1,8 @@
-import Button from "./Button";
-
-export default function Post({ post, deletePost }) {
+export default function Post({ post, children }) {
   return (
     <article>
       {post.title}- {post.content}
-      <footer>
-        <Button
-          onClick={() => deletePost(post.id)}
-          className="secondary"
-        >
-          Eliminar
-        </Button>
-      </footer>
+      <footer>{children}</footer>
     </article>
   );
 }
