@@ -5,7 +5,10 @@ export default function Post({ post, deletePost }) {
     <article>
       {post.title}- {post.content}
       <footer>
-        <Button deletePost={deletePost} />
+        <Button
+          deletePost={deletePost}
+          postId={post.id}
+        />
       </footer>
     </article>
   );

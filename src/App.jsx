@@ -8,16 +8,6 @@ const initialPosts = [
     title: "Post 1",
     content: "Contenido del post 1",
   },
-  {
-    id: 2,
-    title: "Post 2",
-    content: "Contenido del post 2",
-  },
-  {
-    id: 3,
-    title: "Post 3",
-    content: "Contenido del post 3",
-  },
 ];
 
 const App = () => {

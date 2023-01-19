@@ -13,6 +13,8 @@ export default function LayoutPosts({ posts, deletePost }) {
         />
       ))}
 
+      {posts.length === 0 && <article>No hay Posts</article>}
+
       <footer style={{ marginTop: "1rem" }}>Footer example posts</footer>
     </>
   );

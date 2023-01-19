@@ -1,7 +1,7 @@
-export default function Button({ deletePost }) {
+export default function Button({ deletePost, postId }) {
   return (
     <button
-      onClick={() => deletePost(post.id)}
+      onClick={() => deletePost(postId)}
       className="contrast"
     >
       Eliminar
