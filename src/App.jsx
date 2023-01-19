@@ -34,7 +34,6 @@ const App = () => {
           <Post
             key={post.id}
             post={post}
-            deletePost={deletePost}
           >
             <Button
               onClick={() => deletePost(post.id)}
