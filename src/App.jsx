@@ -32,7 +32,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="container">
       <h1>¿Es necesario el context?</h1>
 
       <AddPost createPost={createPost} />
@@ -41,7 +41,7 @@ const App = () => {
         posts={posts}
         deletePost={deletePost}
       />
-    </>
+    </div>
   );
 };
 

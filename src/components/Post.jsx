@@ -1,8 +1,12 @@
+import Button from "./Button";
+
 export default function Post({ post, deletePost }) {
   return (
-    <li>
+    <article>
       {post.title}- {post.content}
-      <button onClick={() => deletePost(post.id)}>Eliminar</button>
-    </li>
+      <footer>
+        <Button deletePost={deletePost} />
+      </footer>
+    </article>
   );
 }
